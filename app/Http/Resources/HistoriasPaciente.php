@@ -22,7 +22,6 @@ class HistoriasPaciente extends JsonResource
             "BLOOD_PREASURE_LOW" => "ta_pd",
             "GLUCOSE" =>  "glic", 
             "CREATININE" => "crs", 
-            "UREA" => "v_urea", 
             "PHOSPHORUS" =>  "p", 
             "POTASSIUM" =>  "k"
         ];
