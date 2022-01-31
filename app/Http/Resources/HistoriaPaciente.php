@@ -25,13 +25,15 @@ class HistoriaPaciente extends JsonResource
             "SODIUM" =>   "sal_dia"
         ];
         $llave = "ENERGY";
+        $llave2 = "ENERGY";
         $type = request()->get("type");
         if(key_exists($type,$types)){
             $llave = strtolower($types[$type]);
+           
         }
         return [
             "Id" => $this->paciente->id,
-            "Type" => request()->get("type"),
+            "Type" => $llave2,
             "Limit" =>  $this[$llave],
         ];
     }
