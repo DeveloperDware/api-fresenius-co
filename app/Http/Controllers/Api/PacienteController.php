@@ -110,7 +110,7 @@ class PacienteController extends Controller
         }
         $client = new Client(array( 'curl' => array( CURLOPT_SSL_VERIFYPEER => false, ), ));
         $doc = DocumentoPaciente::where("dp_id",$request->get("Id"))->first();
-        $response = $client->request("POST",'https://www.dwareltda.com/freseniusHC/admintranet/verArchivoPacientesAPI.php',
+        $response = $client->request("POST",'http://10.223.68.2/historiasClinicas/admintranet/verArchivoPacientesAPI.php',
          [
                'form_params' =>
                 ['na' => $doc->dp_nombre]
