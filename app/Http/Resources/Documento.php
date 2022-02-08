@@ -21,7 +21,7 @@ class Documento extends JsonResource
             "Id" => 	$this->dp_id,
             "Title" => 	$this->dp_archivo,
             "Date" => $dp_freg->format("c"),
-            "Url"=> "https://www.dwareltda.com/freseniusHC/admintranet/verArchivoPacientesAPI.php?na=$this->dp_archivo",
+            "Url"=> "http://10.223.68.2/historiasClinicas/admintranet/verArchivoPacientesAPI.php?na=$this->dp_archivo",
             "ContentType"=>"application/".$archivo[count($archivo)-1]
         ];
     }
