@@ -14,7 +14,7 @@ class Agenda extends JsonResource
      */
     public function toArray($request)
     {
-       
+        
         return [
             "Id"=> $this->n_identificacion,
             "FullName"=> $this->nombres,
@@ -22,7 +22,7 @@ class Agenda extends JsonResource
             "ClinicName"=>$this->sedeInfo->nombre_sede,
             "Phone"=> $this->telefono,
             "Email"=> $this->correo,
-            "Events"=> Evento::collection($this->calendario) 
+            "Events"=> Evento::collection($this->calendario->where("cn_estado","Agendada")) 
         ];
     }
 }
