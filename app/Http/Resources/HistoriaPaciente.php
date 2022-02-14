@@ -29,6 +29,7 @@ class HistoriaPaciente extends JsonResource
         $type = request()->get("type");
         if(key_exists($type,$types)){
             $llave = strtolower($types[$type]);
+            $llave2 = $type;
            
         }
         return [
